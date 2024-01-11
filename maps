@@ -1,75 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenStreetMap with Leaflet</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <style>
-        /* Set the map container to a smaller size */
-        #map {
-            height: 400px; /* Adjust the height as needed */
-            width: 80%;   /* Adjust the width as needed */
-            margin: auto; /* Center the map container */
-        }
-    </style>
-</head>
-<body>
-    <div id="map"></div>
-
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script>
-        var map = L.map('map');
-        var userMarker;
-
-        // Function to set the map view based on the current location
-        function setMapView(position) {
-            var latitude = position.coords.latitude;
-            var longitude = position.coords.longitude;
-
-            map.setView([latitude, longitude], 14);
-
-            if (userMarker) {
-                userMarker.setLatLng([latitude, longitude]).update();
-            } else {
-                userMarker = L.marker([latitude, longitude]).addTo(map)
-                    .bindPopup('Your Location')
-                    .openPopup();
-            }
-        }
-
-        // Function to add markers for Safeway locations
-        function addSafewayMarkers() {
-            var safewayLocations = [
-                { name: 'Safeway 2709', latitude: 33.3762559, longitude: -112.1687605 },
-                { name: 'Safeway 2028', latitude: 35.1894482, longitude: -111.6661722 }
-            ];
-
-            safewayLocations.forEach(location => {
-                var marker = L.marker([location.latitude, location.longitude]).addTo(map)
-                    .bindPopup(location.name);
-            });
-        }
-
-        // Function to handle errors in obtaining the device location
-        function handleLocationError(error) {
-            console.error(`Error getting location: ${error.message}`);
-        }
-
-        // Check if the browser supports geolocation
-        if ('geolocation' in navigator) {
-            navigator.geolocation.getCurrentPosition(setMapView, handleLocationError);
-        } else {
-            console.error('Geolocation is not supported by this browser.');
-        }
-
-        // Add OpenStreetMap as the base layer
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap contributors'
-        }).addTo(map);
-
-        // Add Safeway markers
-        addSafewayMarkers();
-    </script>
-</body>
-</html>
+[
+  {
+    "Location": "2028",
+    "latitude": 35.1894482,
+    "longitude": -111.6661722,
+    "Status": null,
+    "logo": null
+  },
+  {
+    "Location": "2709",
+    "latitude": 33.37614,
+    "longitude": -112.166177,
+    "Status": null,
+    "logo": null
+  },
+  {
+    "Location": "TEST LOCATION",
+    "latitude": 33.392193,
+    "longitude": -112.205371,
+    "Status": null,
+    "logo": null
+  },
+  {
+    "Location": "TEST 2",
+    "latitude": 33.356521,
+    "longitude": -112.159236,
+    "Status": null,
+    "logo": null
+  }
+]
