@@ -33,5 +33,12 @@
     "longitude":-112.157883,
     "Status": null,
     "logo": null
+  },
+ {
+    "Location": "Part 2 ",
+    "latitude": 33.391136,
+    "longitude": -112.206219,
+    "Status": null,
+    "logo": null
   }
 ]
