@@ -1,0 +1,32 @@
+[
+  {
+    "ID": "10010",
+    "Name": "New Janitorial Maintenance"
+    "Status": "Enabled"
+
+  },
+   {
+    "ID": "10020",
+    "Name": "Null"
+    "Status": "Disabled"
+
+  },
+   {
+    "ID": "10030",
+    "Name": "Null1"
+    "Status": "Enabled"
+
+  },
+  {
+    "ID": "10040",
+    "Name": "2"
+    "Status": "Enabled"
+
+  },
+   {
+    "ID": "10050",
+    "Name": "3"
+    "Status": "Enabled"
+
+  }
+]
