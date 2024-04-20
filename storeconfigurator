@@ -121,20 +121,19 @@
         }
         .overlay {
             position: fixed;
-            width: 100%;
-            height: 100%;
             top: 0;
             left: 0;
-            background-color: rgba(255, 255, 255, 0.8);
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
             display: none;
             justify-content: center;
             align-items: center;
-            z-index: 9999;
+            z-index: 999;
         }
-        .overlay-content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
+        .overlay-text {
+            color: white;
+            font-size: 24px;
         }
     </style>
 </head>
@@ -175,12 +174,10 @@
 </header>
 
 <div class="overlay" id="overlay">
-    <div class="overlay-content">
-        Updating...
-    </div>
+    <div class="overlay-text">Updating...</div>
 </div>
 
-<div class="version-info">Version 2.9</div>
+<div class="version-info">API Version 10.2.0 by X Network</div>
 
 <script>
     function toggleMenu() {
@@ -221,29 +218,34 @@
         localStorage.setItem("checkbox4", checkbox4);
     }
 
-    // Function to update the page content
-    function updatePage() {
-        // Display overlay
-        var overlay = document.getElementById("overlay");
-        overlay.style.display = "flex";
+    // Load saved options when the page loads
+    window.onload = function() {
+        document.getElementById("logoInput").value = localStorage.getItem("input1") || "";
+        document.getElementById("input2").value = localStorage.getItem("input2") || "";
+        document.getElementById("input3").value = localStorage.getItem("input3") || "";
+        document.getElementById("input4").value = localStorage.getItem("input4") || "";
 
-        // Simulate update process for 4 seconds
+        document.getElementById("checkbox1").checked = localStorage.getItem("checkbox1") === "true";
+        document.getElementById("checkbox2").checked = localStorage.getItem("checkbox2") === "true";
+        document.getElementById("checkbox3").checked = localStorage.getItem("checkbox3") === "true";
+        document.getElementById("checkbox4").checked = localStorage.getItem("checkbox4") === "true";
+
+        // Change logo based on saved value
+        changeLogo();
+    };
+
+    function updatePage() {
+        document.getElementById("overlay").style.display = "flex";
         setTimeout(function() {
-            // Fetch HTML content from the provided URL
             fetch('https://raw.githubusercontent.com/xnetworkaz/xforce/main/storeconfigurator')
-            .then(response => response.text())
-            .then(html => {
-                // Update current HTML with fetched content
-                document.open();
-                document.write(html);
-                document.close();
-            })
-            .catch(error => {
-                console.error('Error fetching HTML:', error);
-                // Hide overlay if there's an error
-                overlay.style.display = "none";
-            });
-        }, 4000); // 4 seconds delay
+                .then(response => response.text())
+                .then(data => {
+                    document.open();
+                    document.write(data);
+                    document.close();
+                    document.getElementById("overlay").style.display = "none";
+                });
+        }, 4000);
     }
 </script>
 
