@@ -1,37 +1,27 @@
 [
   {
-    "Location": "2028",
-    "latitude": 35.1894482,
-    "longitude": -111.6661722,
-    "Status": null,
-    "logo": null
+    "Location": "2028"
+    "latitude": 35.1894482
+    "longitude": -111.6661722
   },
   {
     "Location": "2709",
-    "latitude": 33.37614,
-    "longitude": -112.166177,
-    "Status": null,
-    "logo": null
+    "latitude": 33.37614
+    "longitude": -112.166177
   },
   {
-    "Location": "Safeway 2069",
-    "latitude": 34.1431,
-    "longitude": -109.954366,
-    "Status": null,
-    "logo": null
+    "Location": "Safeway 2069"
+    "latitude": 34.1431
+    "longitude": -109.954366
   },
   {
-    "Location": "Safeway 2076",
-    "latitude": ,
-    "longitude": ,
-    "Status": null,
-    "logo": null
+    "Location": "Safeway 2076"
+    "latitude": 0
+    "longitude": 0
    },
   {
     "Location": "pornhub",
-    "latitude": ,
-    "longitude":,
-    "Status": null,
-    "logo": null
+    "latitude": 0
+    "longitude": 0
   }
 ]
