@@ -1,27 +1,27 @@
 [
   {
-    "Location": "2028"
-    "latitude": 35.1894482
+    "Location": "2028",
+    "latitude": 35.1894482,
     "longitude": -111.6661722
   },
   {
     "Location": "2709",
-    "latitude": 33.37614
+    "latitude": 33.37614,
     "longitude": -112.166177
   },
   {
-    "Location": "Safeway 2069"
-    "latitude": 34.1431
+    "Location": "Safeway 2069",
+    "latitude": 34.1431,
     "longitude": -109.954366
   },
   {
-    "Location": "Safeway 2076"
-    "latitude": 33.356802
+    "Location": "Safeway 2076",
+    "latitude": 33.356802,
     "longitude": -112.158146
-   },
+  },
   {
     "Location": "pornhub",
-    "latitude": 33.35639520257621
+    "latitude": 33.35639520257621,
     "longitude": -112.15780776570446
   }
 ]
