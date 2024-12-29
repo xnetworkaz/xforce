@@ -1,0 +1,6 @@
+//Change Log
+
+//V0.4 - Fix a super small bug in which if you readloaded twice it would erace the whole map..............
+//V0.3 - Added Paths, Fixed Adding Pins bug in which when add pin was pressed twice it would duplicate the pin
+//V0.2 - Added Custom Color Pins
+//V0.1 - Initial Release 
